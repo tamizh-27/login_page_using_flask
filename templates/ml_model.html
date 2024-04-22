@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>Input Form</title>
+	<style>
+		form {
+			margin: 0 auto;
+			width: 50%;
+			border: 1px solid #ccc;
+			padding: 20px;
+			border-radius: 10px;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+		input[type="text"] {
+			padding: 5px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 15px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+		ul {
+			border: 1px solid black;
+			border-style: dotted;
+			border-width: 5px;
+			border-color: black;
+			background-color:rgb(189, 230, 154)
+		}
+		li {
+			font-size:20px;
+		}
+		h3 {
+			font-size:20px;
+			color:black;
+		}
+	</style>
+</head>
+<body style="background-color:rgb(123, 186, 185)">
+	<h1 align="center" style="color:blue"> <u>Gender Classification</u></h1>
+	<h3> <u>Description:</u> </h3>
+	<ul>
+		<li>Long hair - Enter 0 or 1, where 1 -> "Has long hair" and 0 -> "No long hair".
+		<li>Forehead width - Width of the forehead.</li>
+		<li>Forehead height - Height of the forehead.</li>
+		<li>Nose wide - Enter 0 or 1, where 1 -> "Has wide nose" and 0 -> "No wide nose".</li>
+		<li>Nose long - Enter 0 or 1, where 1 -> "Has long nose" and 0 -> "No long nose".</li>
+		<li>Lips thin - Enter 0 or 1, where 1 -> "Has thin lips" and 0 -> "No thin lips".</li>
+		<li>Distance from nose to lip long - Enter 0 or 1, where 1 -> "long distance between nose and lips" and 0 -> "short distance between nose and lips".</li>
+	</ul> 
+	<form style="background-color: lightgray" method="POST" action="/pred">
+		<label for="input1">Long Hair :</label>
+		<input type="text" id="input1" name="input1">
+
+		<label for="input2">Forehead Width (in cm) :</label>
+		<input type="text" id="input2" name="input2">
+
+		<label for="input3">Forehead Height (in cm) :</label>
+		<input type="text" id="input3" name="input3">
+
+		<label for="input4">Nose Wide :</label>
+		<input type="text" id="input4" name="input4">
+
+		<label for="input5">Nose Long :</label>
+		<input type="text" id="input5" name="input5">
+
+		<label for="input6">Lips Thin :</label>
+		<input type="text" id="input6" name="input6">
+
+		<label for="input7">Distance from Nose to Lips :</label>
+		<input type="text" id="input7" name="input7">
+
+		<input type="submit" value="Predict">
+	</form>
+</body>
+</html>
